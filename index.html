@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC bank limited</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class=" text-center my-12 text-4xl font-semibold">
+        <h2><span class="text-lime-500">ABC </span>Bank Limited</h2>
+        <div class="w-9/12 m-auto md:grid grid-cols-3 gap-5">
+            <div class="bg-yellow-400 w-50 text-center my-10 text-white rounded-lg py-4">
+                <h2>Deposit</h2>
+                <h2>$ <span id="deposit">00</span></h2>
+            </div>
+            <div class="bg-red-400 w-50 text-center my-10 text-white rounded-lg py-4">
+                <h2>Withdraw</h2>
+                <h2>$ <span id="withdraw">00</span></h2>
+            </div>
+            <div class="bg-sky-400 w-50 text-center my-10 text-white rounded-lg py-4">
+                <h2>Balance</h2>
+                <h2>$ <span id="balance">500</span></h2>
+            </div>
+        </div>
+        <div class="w-9/12 m-auto md:flex gap-4">
+            <div class="bg-indigo-400 md:w-6/12 mb-3 rounded-lg py-3">
+                <div>
+                    <h2 class="text-white mb-3">Your Deposit</h2>
+                <input class="px-3 py-2 w-48 rounded text-base" type="text" placeholder="$ Amount" id="input-field">
+                </div>
+                <button class="py-2 px-4 bg-blue-800 rounded-lg my-3 text-white text-xl" id="deposit-btn">Deposit</button>
+            </div>
+            <div class="bg-yellow-400 md:w-6/12 mb-3 rounded-lg py-3">
+                <div>
+                    <h2 class="text-white mb-3">Your Withdraw</h2>
+                <input class="px-3 py-2 w-48 rounded text-base" type="text" placeholder="$ Amount" id="width-field">
+                </div>
+                <button class="py-2 px-4 bg-blue-800 rounded-lg my-3 text-white text-lg" id="withdraw-btn">Withdraw</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="deposit.js"></script>
+    <script src="withdraw.js"></script>
+    <script src="bank.js"></script>
+</body>
+</html>
