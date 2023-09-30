@@ -1,35 +1,41 @@
 document.getElementById('withdraw-btn').addEventListener('click', function(){
     //----withdraw input field---
     const withdrawField=document.getElementById('width-field');
-    const newWithdrawField= parseFloat(withdrawField.value);
-
-    //---withdraw field---
+    const newAdd=withdrawField.value
+    const newWithdrawField= parseFloat(newAdd)
 
     const withdraw=document.getElementById('withdraw')
     const newWithdraw=parseFloat(withdraw.innerText);
 
-    //----withdraw----
-    const addWithdraw=newWithdraw+newWithdrawField;
-    withdraw.innerText=addWithdraw;
-    withdrawField.value=''
-    
-
-
-    //-----balance---
     const balance=document.getElementById('balance')
     const addBalance=parseFloat(balance.innerText);
 
-    const newBalance=addBalance-newWithdrawField;
-    balance.innerText=newBalance;
+    withdrawField.value=''
 
-    //----alert---
-    if(isNaN(newWithdrawField)){
-        withdrawField.value='';
-        alert('String is a not allow')
+    if(!newWithdrawField){
+        alert('Enter your valid number')
+        return ;
+    }
+    
+
+    if(!isNaN(newAdd)){
+        //----withdraw----
+        const addWithdraw=newWithdraw+newWithdrawField;
+        withdraw.innerText=addWithdraw;
+        withdrawField.value=''
+        
+
+
+        //-----balance---
+        
+
+        const newBalance=addBalance-newWithdrawField;
+        balance.innerText=newBalance;
     }
     else{
-        alert('Succesful')
+       return alert('Enter your valid number')
     }
 
+    
     
 })
